@@ -11,16 +11,14 @@ app.get('/users', async (req, res) => {
 });
 
 app.post('/users', async (req, res) => {
-
     try {
         const hashedPassword = await bcrypt.hash(req.body.senha, 10)
+        const user = { nome: req.body.nome, senha: hashedPassword }
+        users.push(user)
+        res.status(201).send();
     } catch (error) {
         res.status(500).send();
     }
-
-    const user = await push({ nome, senha })
-
-    res.json(users)
 });
 
 app.listen(3000)
