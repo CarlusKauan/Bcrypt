@@ -1,0 +1,14 @@
+{
+  "name": "Bcrypt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  },
+  "scripts": {
+    "start": "nodemon src/server.js"
+  }
+}
